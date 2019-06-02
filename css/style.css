@@ -1,0 +1,711 @@
+@font-face {
+    font-family: 'Segoe WP';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Segoe WP N'), url('../fonts/SegoeWP.ttf') format('woff');
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #5094f2;
+}
+
+::-webkit-scrollbar-track {
+    background: #474747;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+}
+
+.nav-menu__nav-item {
+    transition: .2s all linear;
+    text-decoration: none;
+    color: #6c6c6c;
+    font-family: "Segoe WPN";
+    font-size: 1.42857rem;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+}
+
+.nav-menu .nav-menu__nav-item:hover {
+    border-bottom: 3px solid #5094f2;
+}
+
+.nav-menu-mobile .nav-menu__nav-item:hover {
+    color: #fff;
+}
+
+.hamburger {
+    position: absolute;
+    right: 20px;
+    top: 21px;
+    cursor: pointer;
+    border-radius: 2px;
+    width: 37px;
+    height: 30px;
+    background: #73a9f5;
+}
+
+.close-hamburger .first-line {
+    top: 13px;
+    transform: rotate(45deg);
+}
+
+.close-hamburger .second-line {
+    opacity: 0;
+}
+
+.close-hamburger .third-line {
+    top: 13px;
+    transform: rotate(-45deg);
+}
+
+.line {
+    position: absolute;
+    background: #fff;
+    width: 25px;
+    height: 3px;
+    transition: all .7s;
+    left: 16%;
+    border-radius: 1px;
+}
+
+.first-line {
+    top: 8px;
+}
+
+.second-line {
+    top: 14px;
+}
+
+.third-line {
+    top: 20px;
+}
+
+
+.arrow-l {
+    background: url(../img/svg/ArrowL.svg)no-repeat center;
+    top: 50%;
+    left: 0;
+}
+
+.arrow-r {
+    background: url(../img/svg/ArrowR.svg)no-repeat center;
+    top: 50%;
+    right: 0;
+}
+
+.slider-arrow {
+    position: absolute;
+    width: 30px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.nav-menu {
+    width: 394px;
+    display: grid;
+    grid-template-columns: 3.714rem 5.357rem 5.071rem 5.2857rem;
+    grid-auto-rows: 2.7142rem;
+    grid-column-gap: 2rem;
+}
+
+.nav-menu-mobile {
+    display: grid;
+    grid-template-columns: inherit;
+    grid-auto-rows: 35px;
+    justify-items: center;
+    align-items: center;
+    transition: 1s;
+    position: absolute;
+    right: -300px;
+    background: rgba(1, 2, 1, .8);
+    width: 25%;
+    max-width: 150px;
+    height: 25%;
+    z-index: 9;
+    border-radius: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+.nav-menu-mobile_active {
+    right: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 70px;
+}
+
+.logo__link {
+    width: 182px;
+    position: relative;
+    text-decoration: none;
+    color: #000;
+    font-family: "Segoe WP";
+    font-size: 3rem;
+    font-weight: 300;
+    letter-spacing: 0.42px;
+}
+
+.logo {
+    padding-bottom: 12px;
+}
+
+.logo__link::before {
+    position: absolute;
+    content: "";
+    top: 8px;
+    left: -50px;
+    width: 44px;
+    height: 44px;
+    background: url(../img/logo.png)no-repeat;
+}
+
+.viewport {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-bg:nth-child(2) {
+    left: 100%;
+}
+
+
+.slider-bg {
+    background: url(../img/slider-bg-1.png) center no-repeat;
+    background-size: cover;
+    height: 490px;
+    width: 100%;
+
+}
+
+
+
+.bottom {
+    background: url(../img/bg-contrary.png) bottom no-repeat;
+    background-size: cover;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    height: 11px;
+    width: 100%;
+}
+
+.slider__background {
+    height: 100%;
+}
+
+.slider__first-layer {
+    z-index: 1;
+    margin: auto;
+    position: absolute;
+    max-width: 840px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: grid;
+    grid-template-columns: minmax(auto, 352px) minmax(10px, 400px);
+    grid-column-gap: 7.1428rem;
+    justify-items: center;
+    align-items: center;
+}
+
+.slider__phone {
+    background: url(../img/iphone.png) no-repeat;
+}
+
+.slider__title {
+    color: #ffffff;
+    font-family: "Segoe WP";
+    font-size: 2.8rem;
+    font-weight: 300;
+}
+
+.slider__text {
+    color: #ffffff;
+    font-family: "Segoe WP";
+    font-size: 1.85rem;
+    font-weight: 300;
+}
+
+.slider__description {
+    color: #ffffff;
+    font-family: "Segoe WP";
+    line-height: 3.172rem;
+}
+
+.slider-wrap {
+    position: relative;
+}
+
+.slider__background {
+    width: 100%;
+}
+
+.sign-up-button {
+    cursor: pointer;
+    color: #fff;
+    background: #5094f2;
+    border: none;
+    border-radius: 2px;
+    margin-top: 3.21rem;
+    transition: all .5s linear;
+}
+
+.sign-up-button:hover {
+    background: #0043ff;
+}
+
+.sign-up-button__text {
+    font-family: "Segoe WP";
+    font-size: 1.58rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.sign-up-button__sign-up-now {
+    padding-left: 5px;
+}
+
+.contrary-to-popular {
+
+    padding: 73px 0 80px 0;
+
+    max-width: 992px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-row-gap: 20px;
+}
+
+.shopping-cart__img {
+    background: url(../img/cart.png) no-repeat;
+    width: 371px;
+    height: 279px;
+}
+
+.contrary-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contrary-block__img {
+    height: 186px;
+    width: 186px;
+}
+
+.contrary-block__img1 {
+    background: url("../img/pencil.svg");
+}
+
+.contrary-block__img2 {
+    background: url("../img/screen.svg");
+}
+
+.contrary-block__img3 {
+    background: url("../img/basket.svg");
+}
+
+.contrary-block__title {
+    color: #5094f2;
+    font-family: "Segoe WPN";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 44.42px;
+    margin-block-end: -4px;
+}
+
+.contrary-block__description {
+    color: #909090;
+    font-family: "Segoe WPN";
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.contrary-block__text {
+    display: flex;
+    flex-direction: column;
+}
+
+.shopping-cart {
+    margin: auto;
+    max-width: 907px;
+}
+
+.shopping-cart__title {
+    color: #6f7173;
+    font-family: "Segoe WPN";
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 44.42px;
+}
+
+.shopping-cart-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(371px, 1fr));
+    grid-column-gap: 83px;
+    grid-row-gap: 10px;
+    align-items: center;
+}
+
+.shopping-cart-container__description {
+    max-width: 453px;
+}
+
+.shopping-cart-container__title {
+    color: #6f7173;
+    font-family: "Segoe WPN";
+    font-size: 1.857rem;
+    font-weight: 400;
+    line-height: 44.42px;
+}
+
+.shopping-cart-container__paragraph {
+    color: #909090;
+    max-width: 432px;
+    width: 100%;
+    font-family: "Segoe WPN";
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 2.5714rem;
+}
+
+.shopping-cart__basket {
+    margin-top: 2.53em;
+}
+
+.first-block-cart {
+    display: flex;
+    flex-direction: column;
+}
+
+.copyright {
+    color: #909090;
+    font-family: "Segoe WPN";
+    font-size: 1.07rem;
+    font-weight: 300;
+    line-height: 36px;
+}
+
+.footer {
+    text-align: center;
+    padding: 96px 0 44px 0;
+}
+
+@media (min-width:495px) {
+    .hamburger {
+        display: none;
+    }
+
+    .sign-up-button {
+        width: 172px;
+        height: 41px;
+    }
+
+    .contrary-to-popular {
+
+        text-align: center;
+    }
+
+    .sign-up-button__text {
+        margin: auto;
+        width: 94%;
+    }
+
+    .slider__phone {
+        width: 345px;
+        height: 436px;
+    }
+
+    .slider__description {
+        width: 391px;
+    }
+}
+
+@media (max-width:495px) {
+
+    html,
+    body {
+        font-size: 11px;
+    }
+
+    .bottom {
+        display: none;
+    }
+
+    .slider__phone {
+        height: 70%;
+        width: 90%;
+        background-size: contain;
+        justify-self: end;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .logo {
+        padding-left: 55px;
+    }
+
+    .contrary-to-popular {
+        width: 80%;
+        margin: auto;
+    }
+
+    .contrary-block__img {
+        height: 100px;
+        width: 100px;
+        background-size: contain;
+    }
+
+    .contrary-block__title {
+        font-size: 1.7rem;
+    }
+
+    .contrary-block {
+        display: grid;
+        grid-template-columns: 100px 249px;
+        grid-gap: 20px;
+    }
+
+    .shopping-cart-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+
+
+    .slider-wrap {
+        height: 247px;
+    }
+
+
+    .sign-up-button {
+        width: 90%;
+        height: 36px;
+        margin-top: 1.5rem;
+    }
+
+    .sign-up-button__text {
+        justify-content: space-around;
+    }
+
+    .slider__first-layer {
+        z-index: 1;
+        margin: auto;
+        position: absolute;
+        max-width: 840px;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        display: grid;
+        grid-template-columns: 40% 60%;
+        grid-column-gap: 0;
+    }
+
+
+    .slider__description {
+        line-height: 2.12857rem;
+    }
+
+    .slider__title {
+        font-size: 1.4rem;
+    }
+
+    .slider__text {
+        font-size: 1.2rem;
+    }
+
+    .shopping-cart__title {
+        font-size: 2.8rem;
+    }
+
+    .shopping-cart {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .shopping-cart-container__description {
+        margin: auto;
+    }
+
+    .slider-bg {
+        background-size: 100% 100%;
+    }
+
+    .first-block-cart {
+        align-items: center;
+        margin-top: 36px;
+    }
+
+    .shopping-cart__img {
+        background-size: contain;
+        width: 215px;
+        height: 162px;
+    }
+
+    .footer {
+        padding: 70px 0 44px 0;
+    }
+}
+
+@media (min-width:495px) and (max-width: 768px) {
+    .slider-wrap {
+        height: 400px;
+    }
+
+    .logo {
+        padding-left: 55px;
+    }
+
+    .slider__phone {
+
+
+        height: 324px;
+        background-size: contain;
+    }
+
+    .slider__first-layer {
+        grid-template-columns: 276px 305px;
+        grid-column-gap: 3.1428rem;
+    }
+
+    .slider__description {
+        width: 100%;
+    }
+
+    .slider__title {
+        font-size: 2.2rem;
+    }
+
+    .slider__text {
+        font-size: 1.25rem;
+    }
+
+    .slider__phone {
+        width: 100%;
+        height: 319px;
+        background-size: contain;
+    }
+
+    .slick-next {
+        right: 15px;
+    }
+
+    .slick-prev {
+        left: 15px;
+    }
+
+    .contrary-to-popular {
+        width: 80%;
+        margin: auto;
+    }
+}
+
+/* с 768 до 1000 где-то*/
+@media (min-width:768px) and (max-width: 1000px) {
+
+    .slider__first-layer {
+        grid-template-columns: auto minmax(10px, 400px);
+        grid-column-gap: 5.1428rem;
+    }
+
+    .slider__phone {
+        width: 317px;
+        height: 356px;
+        background: url(../img/iphone.png) no-repeat center;
+        background-size: contain;
+    }
+
+    .contrary-to-popular {
+        width: 100%;
+    }
+
+    .shopping-cart-container {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .logo {
+        margin-left: 55px;
+    }
+
+    body {
+        font-size: 12px;
+    }
+
+    .slick-prev {
+        left: 25px;
+    }
+
+    .slick-next {
+        right: 25px;
+    }
+
+    .shopping-cart__title {
+        display: block;
+        width: 333px;
+        margin: 0 auto;
+    }
+
+    .shopping-cart-container {
+        margin-top: 50px;
+        display: grid;
+        grid-gap: 0;
+        grid-template-columns: 45% 55%;
+    }
+
+    .shopping-cart__img {
+        background: url(../img/cart.png) no-repeat;
+        width: 334px;
+        height: 268px;
+        background-size: contain;
+    }
+
+    .slider__description {
+        width: 376px;
+    }
+
+    .slider__title {
+        font-size: 2.6rem;
+        display: block;
+        width: 100%;
+    }
+}
+
+@media (min-width:1000px) {
+
+    .navbar {
+        margin: 0 auto;
+        width: 63%;
+    }
+
+    .slider {
+        height: 481px;
+    }
+
+    .contrary-to-popular {
+        width: 80%;
+        margin: auto;
+    }
+}
