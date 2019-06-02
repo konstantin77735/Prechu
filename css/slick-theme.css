@@ -15,6 +15,13 @@ wxx@charset 'UTF-8';
     src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'), url('./fonts/slick.woff') format('woff'), url('./fonts/slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg');
 }
 
+.slick-next {
+    right: 91px;
+    background: url(../img/arrowr.jpg);
+    z-index: 1;
+}
+
+
 /* Arrows */
 .slick-prev,
 .slick-next {
@@ -92,12 +99,6 @@ wxx@charset 'UTF-8';
 
 [dir='rtl'] .slick-prev:before {
     content: '→';
-}
-
-.slick-next {
-    right: 91px;
-    background: url(../img/svg/arrowr.svg);
-    z-index: 1;
 }
 
 [dir='rtl'] .slick-next {
