@@ -17,7 +17,7 @@ wxx@charset 'UTF-8';
 
 .slick-next {
     right: 91px;
-    background: url(../img/arrowr.jpg);
+    background: url(../img/svg/ArrowR.svg);
     z-index: 1;
 }
 
